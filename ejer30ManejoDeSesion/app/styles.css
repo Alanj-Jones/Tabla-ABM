@@ -1,0 +1,282 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color:#F3F1DA ;
+}
+div.tableContainer{
+    position: absolute;
+    top: 10vh;
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
+    display: block;
+}
+.tableContainer th{
+    position: sticky;
+    top: 0%;
+    height: 7.5vh;
+    width: 11vw; 
+    background-color:#FF7D5C ;     
+}
+.tableContainer th input{
+    height: 7.5vh;
+    width: 11vw; 
+}
+
+table{
+    position: fixed;
+    width: 100%;
+    height: 80%;    
+    border-collapse: collapse;    
+}
+thead{   
+    background-color:#FF7D5C ;
+    width: 100%;
+}
+tbody{
+    height: 55vh;
+    width: 100%;
+    background-color:#807F80 ;
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+}
+tfoot{
+    position: absolute;
+    bottom: 0%;   
+    width: 100%; 
+    background-color:#FF7D5C ;   
+    width:100%; 
+    height: 10vh;    
+}
+footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+input{
+   
+    width: 12%;
+    height: 8vh;
+   
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.header{
+    width: 35%;    
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 2.5vh;
+}
+.topInput{
+    width: 24%;
+    float: right;
+    display: flex;
+
+}
+.topInput input{
+    height: 8vh;
+    width: 80%;
+    font-size: 1.5em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    overflow: auto;
+}
+.topInput label{
+    width: 20%;
+    font-size: 1.5em;
+    padding-top: 3vh;
+}
+.buttons{
+    float: right;
+    width: 41%;
+}
+.buttons button{
+    float: right;
+    height: 8vh;
+    width: 25%;
+    font-size: 1.5em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.DB{
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    background-color: yellow;
+    text-align: center;
+}
+.DB td{
+    width: 11vw;
+}
+.DB button{
+    width: 10vw;
+    height: 5vh;
+}
+#cantRegistros{
+    position: absolute;
+    bottom: 5%;
+}
+
+.formularioAlta{
+    position: absolute;
+    top: 15%; 
+    left: 35%;
+    background-color:white ;
+    height: 50vh;
+    width: 50vw;
+    background-color: #807F80;
+    border: solid;
+    display: inline;
+}
+.topElements{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    background-color: bisque;
+}
+.topElements header{
+    width: 90%;
+    text-align: center;
+    padding-top: 1.5vh;
+}
+.topElements button{
+    width: 10%;
+    color: red;
+    font-size: 2em;
+    float: right;
+    background-color: bisque;
+    border-style: hidden;
+}
+
+.col1, .col2{
+    width: 50%;
+    justify-content: center;
+    font-size: 1.5em;
+    
+}
+.col1 input,label{
+    width: 80%;
+    height: 15%;
+    margin-left: 3%;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+}
+.col1{
+    float: left;
+}
+.col2{
+    float: right;
+}
+.col2 input,label{
+    width: 80%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+}
+.validButton{
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    width: 50%;
+    height: 4vh;
+    font-size: 1.5em;
+}
+th:hover{
+    pointer-events:cursor;
+    cursor : pointer;
+}
+.contenedorActivo {
+    opacity:1;
+    pointer-events: auto;
+}
+.contenedorDesactivado{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+@media (max-width:1000px){
+    [campo-dato = 'turnos_Matricula']{
+        display: none;
+    }
+    .DB td,tfoot td{
+        width: 20vw;
+    }
+    .topInput, .buttons{
+        font-size: 1em;
+    }
+}
+@media (max-width:800px){
+    [campo-dato = "turnos_ApellidoDr"]{
+        display: none;
+    }
+    .DB td,tfoot td{
+        width: 25vw;
+    }
+    .topInput, .buttons{
+        font-size: 0.5em;
+    }
+}
+@media (max-width:600px){
+    [campo-dato = "pdf"]{
+        display: none;
+    }
+    [campo-dato = "modis"]{
+        display: none;
+    }
+    [campo-dato = "bajas"]{
+        display: none;
+    }
+    .DB td ,tfoot td{
+        width: 33.33vw;
+    }
+    
+}
+/**/
+.respuestaPDF{
+    background: Grey;
+    color: white;
+    height: 50%;
+    width:50%;
+    position:fixed;
+    top:20%;
+    left:30%;
+    z-index:10;
+}  
+
+.respuestaServidor{
+    background: rgb(107, 73, 146);
+    color: white;
+    height: 50%;
+    width:50%;
+    position:fixed;
+    top:20%;
+    left:30%;
+    z-index:10;
+    overflow: auto;
+    border-style: solid;
+    border-color: black;
+}
+
+.altaSelec{
+    width: 80%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+}
